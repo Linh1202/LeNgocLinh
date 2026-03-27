@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xin Chào - Chào mừng bạn!</title>
+    <!-- Use Outfit from Google Fonts for a modern, premium feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Giao diện lời chào hiện đại, tinh tế dành cho dự án của bạn.">
+</head>
+<body>
+    <div class="background-container">
+        <!-- Abstract background image or mesh gradient -->
+        <div class="overlay"></div>
+    </div>
+
+    <main class="hero-section">
+        <div class="glass-card">
+            <div class="avatar-wrapper">
+                <div class="glow-ring"></div>
+                <div class="avatar-inner">
+                    <span class="emoji">👋</span>
+                </div>
+            </div>
+            
+            <h1 class="greeting-text">Xin chào, <span class="gradient-text">Chào mừng bạn!</span></h1>
+            <p class="sub-text">Cảm ơn bạn đã ghé thăm. Đây là một giao diện lời chào hiện đại được thiết kế với phong cách Glassmorphism và màu sắc rực rỡ.</p>
+            
+            <div class="action-buttons">
+                <button class="btn btn-primary" id="start-btn">Bắt đầu khám phá</button>
+                <button class="btn btn-secondary" id="more-btn">Tìm hiểu thêm</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Designed with ❤️ for excellence</p>
+    </footer>
+
+    <script>
+        // Subtle interaction for buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mousemove', e => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                btn.style.setProperty('--x', `${x}px`);
+                btn.style.setProperty('--y', `${y}px`);
+            });
+        });
+
+        // Add a floating animation delay to the card
+        window.addEventListener('load', () => {
+            document.querySelector('.glass-card').classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>
