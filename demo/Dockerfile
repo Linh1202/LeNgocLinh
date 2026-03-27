@@ -1,5 +1,5 @@
 # Sử dụng JDK 17 lightweight
-FROM openjdk:17-jdk-alpine
+FROM eclipse-temurin:17-jdk-alpine
 
 # Thư mục làm việc trong container
 WORKDIR /app
